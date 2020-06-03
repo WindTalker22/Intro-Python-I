@@ -1,0 +1,1 @@
+print(f'"{waypoint.name}", {waypoint.lat}, {waypoint.lon}')

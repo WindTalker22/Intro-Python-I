@@ -30,3 +30,37 @@ it should use today’s date to get the month and year.
 import sys
 import calendar
 from datetime import datetime
+
+def cal_fun():
+    year = None
+    month = None
+    
+    if len(sys.argv) != 3:
+        year = datetime.today().year
+        month = datetime.today().month
+    else:
+        year = sys.argv[1]
+        month = sys.argv[2]
+    
+    print(calendar.TextCalendar(calendar.SUNDAY).formatmonth(int(year), int(month)))
+
+cal_fun()
+
+# def CalFun():
+#   c = calendar.TextCalendar(calendar.SUNDAY)  
+#   x, y = 2020,6
+#   if len( sys.argv) == 1:
+#     print(datetime.today())
+#   while True:
+#     try:
+#       a,b= input(f"Enter two values, one for the Year and one for the Month like so: {x},{y}\n").split(',')
+#       break
+#     except ValueError:
+#        return print(datetime.today())
+       
+#   print(sys.argv)
+#   return c.prmonth(int(a),int(b))
+
+
+
+# CalFun()
